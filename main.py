@@ -33,5 +33,6 @@ costoMayor = 0
 nombreEscuderiaMasCara = None
 
 for escuderia in escuderias:
-    if escuderias.costos > costoMayor:
-        costoMayor = escuderias.costos
+    if escuderia.costos > costoMayor:
+        costoMayor = escuderia.costos
+        nombreEscuderiaMasCara = escuderia.nombre
