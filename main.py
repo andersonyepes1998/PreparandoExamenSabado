@@ -1,34 +1,38 @@
 from Escuderia import Escuderia
 
-escuderias=[]
-
-numeroEscuderias = int(input('Digita el numero de escuderias: '))
-contador=1
+escuderias = []
+contador = 1
+numeroEscuderias = int(input("Digite el numero de escuderias: "))
 while contador <= numeroEscuderias:
     escuderia = Escuderia()
-    escuderia.nombre=input('Digite el nombre de la escuderia: ')
-    escuderia.casaMotor=input('Digite el nombre del motor: ')
-    escuderia.PilotoPrincipal.nombre=input('Digite el nombre del piloto: ')
-    escuderia.PilotoPrincipal.fechaNacimiento=input('Digite la fecha del piloto: ')
-    escuderia.PilotoPrincipal.Pais=input('Digite el pais de origen')
-    escuderia.PilotoPrincipal.salarioAnual=int(input('Digite el salario...'))
-    escuderia.Piloto2.nombre=input('Digite el nombre del piloto: ')
-    escuderia.Piloto2.fechaNacimiento=input('Digite la fecha del piloto: ')
-    escuderia.Piloto2.Pais=input('Digite el pais de origen')
-    escuderia.Piloto2.salarioAnual=int(input('Digite el salario...'))
-    
-    escuderias.append(escuderia)
-    
-    contador +=1
+    escuderia.nombre = input("digite el nombre de la escuderia: ")
+    escuderia.casaMotor = input("digite el nombre del casamotor: ")
+    escuderia.pilotoPrincipal.nombre = input("digita el nombre del piloto: ")
+    escuderia.pilotoPrincipal.salarioAnual = input("digita el salario: ")
+    escuderia.pilotoPrincipal.fechaNacimiento = input(
+        "digita la fecha de nacimiento: ")
+    escuderia.pilotoPrincipal.pais = input("digita el pais: ")
+    escuderia.piloto2.nombre = input("digita el nombre del piloto: ")
+    escuderia.piloto2.salarioAnual = input("digita el salario: ")
+    escuderia.piloto2.fechaNacimiento = input(
+        "digita la fecha de nacimiento: ")
+    escuderia.piloto2.pais = input("digita el pais del piloto: ")
+    escuderia.costos = input("ingrese los costos: ")
 
-#RECORRIENDOLALISTA DE ESCUDERIAS
+
+escuderias.append(escuderia)
+
+contador = contador + 1
+
+# Recorriendo la Lista de escuderías
 
 for escuderia in escuderias:
-    print(escuderia.nombre, escuderia.Costos)
-    
-costoMayor=0
-nombreEscuderiaMascara=None
+    print(escuderia.nombre, escuderia.costos)
+
+costoMayor = 0
+nombreEscuderiaMasCara = None
+
 for escuderia in escuderias:
-    if escuderia.Costos > costoMayor:
-        costoMayor=escuderia.Costo
-        
+    if escuderia.costos > costoMayor:
+        costoMayor = escuderia.costos
+        nombreEscuderiaMasCara = escuderia.nombre
