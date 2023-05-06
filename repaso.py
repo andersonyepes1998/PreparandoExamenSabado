@@ -63,3 +63,20 @@ calcularnumeromayor = lambda numero1, numero2 : 1 if numero1>numero2 else -1
 mostrarResultado = lambda numero : print("El primer número es mayor",numero1) if numero == 1 else print("El segundo número es mayor",numero2)
 
 mostrarResultado(calcularnumeromayor(numero1, numero2))
+
+
+
+def funcion(x):
+    return x + x
+
+funcion2=lambda x: x+x
+
+print(funcion(2))
+print(funcion2(2))
+
+
+def funcion3(num):
+    return lambda x: x+num
+
+resultado=funcion3(10)
+print(resultado(3))
